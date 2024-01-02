@@ -36,3 +36,13 @@
     transform: rotate(360deg);
   }
 }
+
+.navigation-buttons > * {
+  margin-right: 10px; /* Adjust the value as needed */
+}
+
+.nav-link {
+  text-decoration: none; /* Optional, for styling links as buttons */
+  padding: 5px 10px; /* Optional, for styling links as buttons */
+  /* Add more styling as needed */
+}
