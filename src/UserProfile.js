@@ -1,10 +1,9 @@
 import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 
-function UserProfile() {
+function UserProfile({}) {
   const [user, setUser] = useState({});
   const { userId } = useParams();
-
   useEffect(() => {
     async function loadUser() {
       const response = await fetch(
@@ -17,12 +16,18 @@ function UserProfile() {
   }, [userId]);
 
   if (user.id) {
-    return Object.entries(user).map(([key, value]) => (
+    return (
+      <>
+      {Object.entries(user).map(([key, value]) => (
       <div key={key}>
         <label>{key}</label>: {JSON.stringify(value)}
         <hr />
+
       </div>
-    ));
+    ))} 
+   
+    </>
+    )
   }
   return "Loading...";
 }
