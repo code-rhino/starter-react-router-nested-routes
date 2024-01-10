@@ -15,6 +15,7 @@ function App() {
         <GoHomeButton />
         <Link to="/">Home</Link>
         <Link to="/about">About</Link>
+        <Link to="/users/1">User 1</Link>
       </div>
       <RootRoutes />
     </Router>
