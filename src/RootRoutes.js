@@ -11,7 +11,10 @@ function RootRoutes() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
-        <Route path="/users/:userId" element={<User />} />
+        <Route path="/users/:userId" element={<User />}>
+          <Route path="posts" element={<p>Here are a list of the user’s posts</p> } />
+          <Route path="posts/:postId" element={<p>Here is a single post</p> } />
+        </Route>
         <Route path="*" element={<NoMatch />} />
       </Routes>
  
