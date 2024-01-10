@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 
-function UserProfile({userId}) {
+function UserProfile() {
   const [user, setUser] = useState({});
   const { userId } = useParams()
   
